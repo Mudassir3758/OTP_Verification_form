@@ -96,7 +96,7 @@ html, body {
     transform: translateY(-2px);
 }
 
-.auth-login-account{font-size: 14px;}
+.auth-login-account{font-size: 16px;}
 
 /* =========================================
    SOCIAL ICON BUTTONS
@@ -180,7 +180,12 @@ html, body {
 /* =========================================
    RESPONSIVE DESIGN
    ========================================= */
-
+   /* desktop (max-width 767px) */
+@media screen and (max-width: 991px){
+    .form-links {
+        font-size: 14px;
+    }
+}
 /* Tablet fixes (max-width 767px) */
 @media screen and (max-width: 767px) {
     /* OTP Verification form */
@@ -206,13 +211,9 @@ html, body {
     .auth-header p {
         font-size: 13px;
     }
-
+    
     .form-group-custom input {
         font-size: 14px;
-    }
-
-    .form-links {
-        font-size: 12px;
     }
 
     .custom-btn {
@@ -221,6 +222,10 @@ html, body {
     }
 
     .auth-new-account{
+        font-size: 14px;
+    }
+
+    .auth-login-account{
         font-size: 14px;
     }
 
