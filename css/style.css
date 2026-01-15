@@ -1,0 +1,252 @@
+/* =========================================
+   GLOBAL FONT SETTINGS
+   ========================================= */
+html, body {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* =========================================
+   Form SECTION BACKGROUND + OVERLAY
+   ========================================= */
+.auth-section {
+     position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('../assets/images/Background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Dark transparent overlay */
+.auth-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.welcome {
+    position: relative;
+    z-index: 2;
+}
+.welcome img{width: 50%;}
+
+/* Content appears above overlay */
+.Content{
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================
+   HEADING STYLING
+   ========================================= */
+.auth-header h3 {
+    font-weight: 700;
+}
+
+.auth-header p{
+    color: #6e6666;
+    font-size: 14px;
+}
+
+/* =========================================
+   INPUT FIELD STYLING
+   ========================================= */
+.form-group-custom input{
+    border: none;
+    border-bottom: 1px solid grey;
+    border-radius: 0px;
+}
+.form-floating>.form-control{padding: 26px 20px 0px 13px !important;}
+.form-floating>label{padding: 20px 8px 0px 8px !important;}
+
+/* Input focus highlight */
+.auth-section input:focus, .auth-section input:active{
+    box-shadow: none;
+    border-color: black;
+}
+
+.form-links .form-check-label{
+    font-size: 14px;
+}
+.form-links .form-check-input{
+    border: 1px solid grey;
+}
+
+/* =========================================
+   CUSTOM BUTTON (SIGN IN)
+   ========================================= */
+.custom-btn {
+    font-size: 17px;
+    font-weight: 600;
+    background-image: linear-gradient(to right bottom, #a7deef, #004387);
+    padding: 10px;
+    border-radius: 11px;
+    border: none;
+    transition: 0.3s;
+}
+
+/* Button hover smooth lift */
+.custom-btn:hover {
+    background-image: linear-gradient(to right bottom, #a7deef, #044b98);
+    transform: translateY(-2px);
+}
+
+.auth-login-account{font-size: 14px;}
+
+/* =========================================
+   SOCIAL ICON BUTTONS
+   ========================================= */
+.auth-social-icons a{
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid white;
+    transition: 0.4 ease all;
+}
+
+/* Default gradient backgrounds */
+.auth-social-icons a.icon-facebook{background-image: linear-gradient(to top, #234ca1, #8db3fe);}
+.auth-social-icons a.icon-twitter{background-image: linear-gradient(to top, #06a5d1, #99eaff);}
+.auth-social-icons a.icon-google{background-image: linear-gradient(to top, #dd4b39, #ff998d);}
+
+/* Solid color hover effect (smooth) */
+.auth-social-icons a.icon-facebook:hover{
+    background-image: none;
+    background-color: #3b5998;
+    color: #fff !important;
+}
+
+.auth-social-icons a.icon-twitter:hover{
+    background-image: none;
+    background-color: #1da1f2;
+    color: #fff !important;
+}
+
+.auth-social-icons a.icon-google:hover{
+    background-image: none;
+    background-color: #db4437;
+    color: #fff !important;
+}
+
+/* Icon vertical alignment */
+.auth-social-icons a i {
+    line-height: 25px;
+}
+
+/* =========================================
+   OTP Verificatiion form css
+   ========================================= */
+
+.otp_input input{
+    width: 45px;
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* OTP Resend button */
+.resend-btn {
+    font-size: 15px;
+    font-weight: 600;
+    color: #787878;
+    background-image: linear-gradient(to right bottom, #d4eff7, #bbd5f1);
+    padding: 5px 13px;
+    border-radius: 11px;
+    border: none;
+    transition: 0.3s;
+}
+
+/* Button hover smooth lift */
+.resend-btn:hover {
+    background-image: linear-gradient(to right bottom, #d5e8ee, #c7dbf0);
+    color: #787878;
+    transform: translateY(-2px);
+}
+/* OTP boxes responsive fix */
+.otp_input .form-control {
+    margin-right: 8px;
+}
+
+.otp_input .form-control:last-child {
+    margin-right: 0;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+/* Tablet fixes (max-width 767px) */
+@media screen and (max-width: 767px) {
+    /* OTP Verification form */
+     .otp_input .form-control {
+        width: 40px;
+        height: 40px;
+        margin-right: 6px;
+    }
+
+}
+
+/* Small mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+
+    .Content {
+        padding: 30px !important;
+    }
+
+    .auth-header h3 {
+        font-size: 20px;
+    }
+
+    .auth-header p {
+        font-size: 13px;
+    }
+
+    .form-group-custom input {
+        font-size: 14px;
+    }
+
+    .form-links {
+        font-size: 12px;
+    }
+
+    .custom-btn {
+        font-size: 15px;
+        padding: 8px;
+    }
+
+    .auth-new-account{
+        font-size: 14px;
+    }
+
+    .auth-social-icons a {
+        width: 38px;
+        height: 38px;
+    }
+
+    .auth-social-icons a i {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    /* OTP Verification Form */
+    .otp_input label {font-size: 13px;}
+
+     .otp_input .d-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .otp_input .form-control {
+        width: 32px;
+        height: 32px;
+        margin: 5px;
+        font-size: 10px;
+        
+    }
+}
